@@ -100,6 +100,7 @@ import Text.Pandoc.Readers.Textile
 import Text.Pandoc.Readers.TikiWiki
 import Text.Pandoc.Readers.TWiki
 import Text.Pandoc.Readers.Txt2Tags
+import Text.Pandoc.Readers.VerboseJSON (readVerboseJSON)
 import Text.Pandoc.Readers.Vimwiki
 import Text.Pandoc.Shared (mapLeft)
 import qualified Text.Pandoc.UTF8 as UTF8
@@ -115,6 +116,7 @@ readers = [ ("native"       , TextReader readNative)
                                                case readJSON o s of
                                                  Right doc -> return doc
                                                  Left _ -> throwError $ PandocParseError "JSON parse error")
+           ,("vjson"        , TextReader readVerboseJSON)
            ,("markdown"     , TextReader readMarkdown)
            ,("markdown_strict" , TextReader readMarkdown)
            ,("markdown_phpextra" , TextReader readMarkdown)

@@ -373,6 +373,7 @@ library
                  pandoc-types >= 1.17.3 && < 1.18,
                  aeson >= 0.7 && < 1.4,
                  aeson-pretty >= 0.8.5 && < 0.9,
+                 aeson-better-errors,
                  tagsoup >= 0.14.6 && < 0.15,
                  base64-bytestring >= 0.1 && < 1.1,
                  zlib >= 0.5 && < 0.7,
@@ -457,6 +458,7 @@ library
                    Text.Pandoc.Readers.Odt,
                    Text.Pandoc.Readers.EPUB,
                    Text.Pandoc.Readers.Muse,
+                   Text.Pandoc.Readers.VerboseJSON,
                    Text.Pandoc.Writers,
                    Text.Pandoc.Writers.Native,
                    Text.Pandoc.Writers.Docbook,
@@ -661,6 +663,7 @@ test-suite test-pandoc
                   Tests.Readers.EPUB
                   Tests.Readers.Muse
                   Tests.Readers.Creole
+                  Tests.Readers.VerboseJSON
                   Tests.Writers.Native
                   Tests.Writers.ConTeXt
                   Tests.Writers.Docbook
